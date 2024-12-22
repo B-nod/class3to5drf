@@ -5,6 +5,8 @@ import Hompage from './pages/userpage/Hompage'
 import AdminHeader from './components/admincomponents/AdminHeader'
 import AdminDashboard from './pages/adminpages/AdminDashboard'
 import AddBlog from './pages/adminpages/AddBlog'
+import Register from './pages/userpage/Register'
+import Login from './pages/userpage/Login'
 
 const Myroutes = () => {
   return (
@@ -14,6 +16,9 @@ const Myroutes = () => {
             {/* normal user */}
             <Route path='/' element={<Layout/>}>
             <Route index element={<Hompage/>}/>
+            <Route path='register' element={<Register/>}/>
+            <Route path='login' element={<Login/>}/>
+            
 
             </Route>
             <Route path='/admin/' element={<AdminHeader/>}>

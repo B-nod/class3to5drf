@@ -32,6 +32,9 @@ class LoginUser(APIView):
                 "role": user.is_user,
                 "refresh": str(refresh),
                 "access": str(refresh.access_token),
+                "is_staff":user.is_staff,
+                "username":user.username
+             
             })
         return Response({"error": "Invalid Credentials"}, status=status.HTTP_400_BAD_REQUEST)
 
